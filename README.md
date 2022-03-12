@@ -63,7 +63,9 @@ case_study_1$month <- format(as.Date(case_study_1$started_at),"%m")
 case_study_1$Date <- format(as.Date(case_study_1$started_at),"%d")
 case_study_1$year <- format(as.Date(case_study_1$started_at),"%Y")
 
-# dataset for visualization on Tableau
 write.csv(case_study_1, file = "case_study_1", row.names = FALSE)
+**Tableau Dashboard**
+
+Visualizations built in a dashboard. 
 ![Dashboard 1](https://user-images.githubusercontent.com/53640666/158020449-dacc2015-b691-41eb-8c62-3e49bcd19f44.png)
 
