@@ -58,9 +58,15 @@ interested in analyzing the Cyclistic historical bike trip data to identify tren
 We will be using a public dataset published by Divvy a bike sharing company in Chicago:
 1. About [Divvy](https://www.divvybikes.com/about)
 2. Original [link](https://divvy-tripdata.s3.amazonaws.com/index.html) to the dataset.
-3. Data license
+3. Data license: Cyclistic is a fictional company. For the purposes of this case study,
+the datasets are appropriate and will enable you to answer the business questions. The data has been made available by
+Motivate International Inc. under this [license.](https://ride.divvybikes.com/data-license-agreement)
 
 Data Visualization: [Tableau](https://public.tableau.com/views/Cyclisticbike-shareanalysis_16456039688820/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link)
+
+## Preparing Data for Analysis
+For this project, I've used previous 12 months of Cyclistic trip data from April 2020 to March 2021, From the  [link](https://divvy-tripdata.s3.amazonaws.com/index.html)
+
 
 ```
 install.packages("tidyverse")
@@ -91,7 +97,10 @@ td12 <- read.csv("202103-divvy-tripdata.csv")
 ```
 #Combining all datasets and assigning to (trip_data_fy_2021)
 trip_data_fy_2021 <- rbind(td1, td2, td3, td4, td5, td6, td7, td8, td9, td10, td11, td12)
-
+```
+## Processing and Analysis of Data
+Here, I will be transforming and organizing data by adding new columns, extracting information and removing bad data and duplicates.
+```
 #Removing any empty rows or columns present and assigning to (new_trip_data_fy_2021)
 new_trip_data_fy_2021 <- remove_empty(trip_data_fy_2021, which=c("rows", "cols"))
 
@@ -103,8 +112,7 @@ new_trip_data_fy_2021_no_dups <- new_trip_data_fy_2021[!duplicated(new_trip_data
 
 #assigning (new_trip_data_fy_2021_no_dups) dataset to case_study_1
 case_study_1 <- new_trip_data_fy_2021_no_dups
-```
-```
+
 #creating a column called (ride_length)
 case_study_1 <- case_study_1 %>% 
   mutate (ride_length = difftime(ended_at,started_at, units = "mins"))
