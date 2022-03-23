@@ -55,10 +55,9 @@ casual riders would buy a membership, and how digital media could affect their m
 interested in analyzing the Cyclistic historical bike trip data to identify trends.
 
 ## Source of the datasets
-We will be using a public dataset published by Divvy a bike sharing company in Chicago:
-1. About [Divvy](https://www.divvybikes.com/about)
-2. Original [link](https://divvy-tripdata.s3.amazonaws.com/index.html) to the dataset.
-3. Data license: Cyclistic is a fictional company. For the purposes of this case study,
+Original [link](https://divvy-tripdata.s3.amazonaws.com/index.html) to the dataset.
+
+Data license: Cyclistic is a fictional company. For the purposes of this case study,
 the datasets are appropriate and will enable you to answer the business questions. The data has been made available by
 Motivate International Inc. under this [license.](https://ride.divvybikes.com/data-license-agreement)
 
